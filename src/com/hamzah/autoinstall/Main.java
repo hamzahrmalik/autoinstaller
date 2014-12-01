@@ -28,6 +28,7 @@ public class Main implements IXposedHookLoadPackage {
 					//get the confirm button
 					Button mOk = (Button) XposedHelpers.getObjectField(param.thisObject, "mOk");
 					//make it think user has read permissions
+					XposedHelpers.setObjectField(param.thisObject, "mScrollView", null);
 					XposedHelpers.setBooleanField(param.thisObject, "mOkCanInstall", true);
 					//click install button
 					mOk.performClick();
