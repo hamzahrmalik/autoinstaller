@@ -19,9 +19,9 @@ public class MainActivity extends Activity {
 		@Override
 		public void onCreate(Bundle savedInstanceState) {
 			super.onCreate(savedInstanceState);
-			addPreferencesFromResource(R.xml.pref);
 			this.getPreferenceManager().setSharedPreferencesName("pref");
 			this.getPreferenceManager().setSharedPreferencesMode(Context.MODE_WORLD_READABLE);
+			addPreferencesFromResource(R.xml.pref);
 			
 		}
 	}
